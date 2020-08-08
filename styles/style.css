@@ -1,0 +1,234 @@
+/*  Beans & Tings Stylesheet
+    WA2005 Project
+    Name: Matthew Zolciak
+    Date: 08/05/2020 */
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  height: 100%;
+}
+
+.header-btn {
+  position: fixed;
+  top: 5px;
+  left: 10px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1000;
+  font-size: 2em;
+  transition: all 0.2s;
+}
+
+.branding {
+  text-align: center;
+}
+
+.branding img {
+  width: 70%;
+}
+
+.mobile-nav {
+  display: grid;
+  justify-items: center;
+  /* padding: 1em; */
+  transition: all 0.2s;
+  transform: translateY(-100%);
+  /* background: mistyrose; */
+  background: #333;
+  position: fixed;
+  width: 100%;
+}
+
+.mobile-nav .main-list {
+  font-size: 0.75em;
+  padding-bottom: 0.5em;
+}
+
+.mobile-nav .nav-link {
+  color: #fff;
+}
+
+.mobile-nav .nav-link:hover {
+  color: #333;
+}
+
+.mobile-nav.open {
+  transition: all 0.2s;
+  transform: translateY(0);
+}
+
+.mobile-nav.open .header-btn {
+  transform: rotate(180deg);
+}
+
+.main-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  background-color: rgba(255, 228, 225, 0.534);
+  padding: 0.5em;
+  font-family: "Maiden Orange", cursive;
+  letter-spacing: 2px;
+}
+
+.main-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  padding: 1em;
+  text-decoration: none;
+  color: #000;
+  transition: all 0.2s;
+  font-size: 1.2em;
+}
+
+.nav-link:hover {
+  background: #fff;
+}
+
+.branding a {
+  text-decoration: none;
+  color: #000;
+}
+
+.branding {
+  margin: 0 0 0.5em 0;
+}
+
+/* HERO */
+.hero {
+  background: url("../images/hero.jpg");
+  height: calc(100vh - 66.4px);
+  background-size: cover;
+  background-position: center;
+  padding-left: 1.5em;
+  font-family: "Maiden Orange", cursive;
+  letter-spacing: 4px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__container img {
+  width: 100%;
+}
+
+.hero__container {
+  color: #fff;
+}
+
+.hero h1 {
+  margin: 0;
+}
+
+/* BUTTON */
+.btn {
+  padding: 1em;
+  text-decoration: none;
+  font-size: 1em;
+  background: mistyrose;
+  border-radius: 50px;
+  color: #000;
+  transition: all 200ms;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.btn:hover {
+  transform: scale(1.2);
+  box-shadow: 0px 0px 10px 0px #000;
+}
+
+.cta-contact {
+  color: #fff;
+}
+
+.cta-contact h3 {
+  margin: 0;
+}
+
+form {
+  width: 80%;
+  margin: 0 auto;
+  color: #fff;
+  padding: 1em;
+}
+
+form .form-control input {
+  display: block;
+  margin: 0.5em 0;
+  width: 100%;
+  font-size: 1.25em;
+}
+
+.form-control label {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+form button {
+  width: 100%;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1em;
+  border: 1px solid #333;
+  padding: 0.25em;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #333;
+  border: 1px solid #fff;
+  transition: all 0.2s;
+}
+
+@media screen and (max-width: 780px) {
+  .main-nav {
+    display: none;
+  }
+  .hero {
+    height: 100vh;
+    text-align: center;
+  }
+  .mobile-nav .main-list .nav-link {
+    padding: 0.5em;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .main-form {
+    align-self: start;
+  }
+}
+
+@media screen and (min-width: 781px) {
+  .mobile-nav {
+    display: none;
+  }
+
+  .header-btn {
+    display: none;
+  }
+
+  .hero__container {
+    text-align: center;
+  }
+}
